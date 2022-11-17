@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+
+$red-palette: mat.define-palette(mat.$red-palette);
+$red: mat.get-color-from-palette($red-palette);
+
+.error {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: $red;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 25px;
+  cursor: pointer;
+}

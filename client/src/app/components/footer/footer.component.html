@@ -1,0 +1,17 @@
+<mat-toolbar class="container">
+  <div class="block">
+    <h1 class="logo" routerLink="">Footer</h1>
+  </div>
+  <div class="currencies">
+    <h1 class="currency">1 USD =
+      <span class="amount" *ngIf="usdToUah">
+        {{usdToUah | number : '1.2-2'}} UAH
+      </span>
+    </h1>
+    <h1 class="currency">1 EUR =
+      <span class="amount" *ngIf="eurToUah">
+        {{eurToUah | number : '1.2-2'}} UAH
+      </span>
+    </h1>
+  </div>
+</mat-toolbar>

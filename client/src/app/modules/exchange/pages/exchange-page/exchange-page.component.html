@@ -1,0 +1,51 @@
+<div class="container">
+  <h1 class="title">Exchange</h1>
+  <div class="wrapper">
+    <form [formGroup]="form">
+      <div class="inputs">
+        <div class="inputs-container">
+
+          <app-exchange-input 
+            [control]="form.controls.give"
+            [isGive]="true" 
+            [onChangeGive]="onChangeGive.bind(this)"
+          ></app-exchange-input>
+
+          <app-currency-list
+            [currencies]="currencyService.currencyArray"
+            [selectedSymbol]="selectedGive.symbol"
+            [isGive]="true"
+            [setSelectedGive]="setSelectedGive.bind(this)"
+          ></app-currency-list>
+
+        </div>
+        <mat-icon (click)="swap()">compare_arrows</mat-icon>
+        <div class="inputs-container">
+
+          <app-exchange-input 
+            [control]="form.controls.take"
+            [isGive]="false" 
+            [onChangeTake]="onChangeTake.bind(this)"
+          ></app-exchange-input>
+
+          <app-currency-list
+            [currencies]="currencyService.currencyArray"
+            [selectedSymbol]="selectedTake.symbol"
+            [isGive]="false"
+            [setSelectedTake]="setSelectedTake.bind(this)"
+          ></app-currency-list>
+
+        </div>
+      </div>
+      <button 
+        [disabled]="isError()" 
+        type="submit" 
+        class="button" 
+        mat-raised-button 
+        color="primary"
+      >
+        Exchange
+      </button>
+    </form>
+  </div>
+</div>

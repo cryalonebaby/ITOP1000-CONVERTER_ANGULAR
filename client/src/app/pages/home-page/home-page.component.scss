@@ -1,0 +1,25 @@
+.container {
+  height: 80vh;
+  position: relative;
+}
+
+.wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  & h1 {
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  & button {
+    margin-top: 20px;
+  }
+}

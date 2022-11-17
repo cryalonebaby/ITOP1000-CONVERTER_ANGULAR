@@ -1,0 +1,21 @@
+<mat-toolbar class="container" color="primary">
+  <div class="currencies">
+    <h1 class="currency">1 USD =
+      <span *ngIf="usdToUah">
+        {{usdToUah | number : '1.2-2'}} UAH
+      </span>
+    </h1>
+    <h1 class="currency">1 EUR =
+      <span *ngIf="eurToUah">
+        {{eurToUah | number : '1.2-2'}} UAH
+      </span>
+    </h1>
+  </div>
+  <div *ngIf="!this.authService.isLoggedIn" class="block buttons">
+    <button class="button" mat-stroked-button routerLink="signin">Sign In</button>
+    <button class="button" mat-stroked-button routerLink="signup">Sign Up</button>
+  </div>
+  <div *ngIf="this.authService.isLoggedIn" class="block buttons">
+    <button class="button" mat-stroked-button (click)="logout()">Log Out</button>
+  </div>
+</mat-toolbar>

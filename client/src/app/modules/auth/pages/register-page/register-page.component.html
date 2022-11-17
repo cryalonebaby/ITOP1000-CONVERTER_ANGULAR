@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="wrapper">
+    <h1 class="title">Create Account</h1>
+    <form class="form" [formGroup]="form" (ngSubmit)="signUp()">
+
+      <app-form-input
+        [control]="username"
+        label="Username"
+        error='Password must be at least 6 characters, and ends with ".com"'
+        type="text"
+      ></app-form-input>
+
+      <app-form-input
+        [control]="password"
+        label="Password"
+        error="Password must be at least 6 symbols, and consist one of the special symbols (@, _, -, !, ?, #)"
+        type="password"
+      ></app-form-input>
+
+      <button 
+        type="submit" 
+        mat-raised-button 
+        color="primary" 
+        [disabled]="username.errors || password.errors"
+      >Create</button>
+    </form>
+  </div>
+</div>

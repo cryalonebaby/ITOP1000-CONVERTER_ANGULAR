@@ -1,0 +1,14 @@
+.currency {
+  &-item {
+    background-color: aliceblue;
+    margin: 3px;
+    padding: 8px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+
+.active {
+  background-color:#4050B5;
+  color: white;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="wrapper">
+    <h1 class="title">SignIn</h1>
+    <form class="form" [formGroup]="form" (ngSubmit)="signIn()">
+
+      <app-form-input
+        [control]="username"
+        label="Username"
+        error="Invalid username"
+        type="text"
+      ></app-form-input>
+
+      <app-form-input
+        [control]="password"
+        label="Password"
+        error="Invalid password"
+        type="password"
+      ></app-form-input>
+
+      <button 
+        type="submit"
+        mat-raised-button 
+        color="primary"
+        [disabled]="username.errors || password.errors"
+      >Sign In</button>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,10 @@
+<div class="input-block">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>{{label}}</mat-label>
+    <input [formControl]="control" matInput [type]="type"/>
+  </mat-form-field>
+  
+  <span class="error" *ngIf="control.touched && control.errors"
+    >{{error}}</span
+  >
+</div>

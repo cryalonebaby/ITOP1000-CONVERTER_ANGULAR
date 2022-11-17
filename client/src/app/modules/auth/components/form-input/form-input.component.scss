@@ -1,0 +1,12 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.error {
+  width: 200px;
+  color: rgb(255, 30, 30);
+  font-size: 12px;
+  font-weight: bold;
+}

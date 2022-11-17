@@ -1,0 +1,8 @@
+<div class="currency-container" *ngIf="currencies">
+  <div 
+    *ngFor="let currency of currencies" 
+    class="currency-item" 
+    [ngClass]="{'active': currency.symbol === selectedSymbol}"
+    (click)="selectFn(currency)"
+  >{{currency.symbol}}</div>
+</div>

@@ -1,0 +1,11 @@
+<mat-form-field appearance="fill" class="currency-input">
+  <mat-label>{{label}}</mat-label>
+  <input 
+    [formControl]="control"
+    #input
+    (keyup)="changeFn(input.value)"
+    type="number" 
+    matInput 
+    appPrevent
+  />
+</mat-form-field>

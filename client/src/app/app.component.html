@@ -1,0 +1,8 @@
+<div class="container">
+  <app-global-error></app-global-error>
+  <app-navbar [usdToUah]="usdToUah" [eurToUah]="eurToUah"></app-navbar>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer [usdToUah]="usdToUah" [eurToUah]="eurToUah"></app-footer>
+</div>

@@ -1,0 +1,4 @@
+<div class="error" *ngIf="this.errorService.error$ | async as error">
+  <p>{{error}}</p>
+  <span class="close" (click)="close()">&times;</span>
+</div>
